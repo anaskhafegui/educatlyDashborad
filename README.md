@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Admin Dashboard with authentication and CRUD opreations For both Product and Admin using trestle package.
 
-Things you may want to cover:
+* Ruby version & System dependencies
 
-* Ruby version
+Ruby version:- 2.6.3
+Rails version:- 5.2.8.1
+SQLite version 3.31.1 
+https://github.com/TrestleAdmin/trestle
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
