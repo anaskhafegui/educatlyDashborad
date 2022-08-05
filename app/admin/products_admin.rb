@@ -15,6 +15,7 @@ Trestle.resource(:products) do
     column :price
     column :image , link: false
     column :description
+    column :administrator, link: true
     column :created_at, align: :center
    actions
   end
@@ -26,10 +27,7 @@ Trestle.resource(:products) do
      text_field :price
      active_storage_field :image
      text_field :description
-     row do
-       col { datetime_field :updated_at }
-       col { datetime_field :created_at }
-     end
+  
    end
 
    

@@ -1,7 +1,7 @@
-Trestle.resource(:admins, model: Administrator, scope: Auth) do
+Trestle.resource(:administrators, model: Administrator, scope: Auth) do
   menu do
     group :configuration, priority: :last do
-      item :admins, icon: "fas fa-users"
+      item :administrators, icon: "fas fa-users"
     end
   end
 
@@ -12,14 +12,12 @@ Trestle.resource(:admins, model: Administrator, scope: Auth) do
     column :email, link: true
     column :first_name
     column :last_name
-    column :created_at
-    column :updated_at
     actions do |a|
       a.delete unless a.instance == current_user
     end
   end
 
-  form do |admin|
+  form do |administrator|
     text_field :email
 
     row do
@@ -30,11 +28,6 @@ Trestle.resource(:admins, model: Administrator, scope: Auth) do
     row do
       col(sm: 6) { password_field :password }
       col(sm: 6) { password_field :password_confirmation }
-    end
-
-    row do
-      col { datetime_field :updated_at }
-      col { datetime_field :created_at }
     end
   end
 end
