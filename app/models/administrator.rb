@@ -1,6 +1,9 @@
 class Administrator < ApplicationRecord
     include Trestle::Auth::ModelMethods
     include Trestle::Auth::ModelMethods::Rememberable
+    validates :email,:password , presence: true
+
+    has_many :products, dependent: :destroy
   
     # Prevent demo user from being modified
     validate on: :update do
